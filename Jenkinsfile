@@ -9,6 +9,7 @@ pipeline{
         }
         stage('image_build'){
             steps{
+                sh "docker info"
                 sh "docker image build -t saleor:1.0 ."
             }
         }
